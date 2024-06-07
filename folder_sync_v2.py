@@ -1,28 +1,48 @@
 import os
-from pathlib import Path
 import shutil
-import argparse
 import time
+import argparse
 from datetime import datetime, UTC
+from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
+import hashlib
+
+
+def hash_file(file_path):
+    hash_fun = hashlib.blake2b()
+    with open(file_path, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            hash_fun.update(chunk)
+    return hash_fun.hexdigest()
+
+def atomic_copy(source_dest_tuple):
+    source_file, destination_file = source_dest_tuple
+    temp_destination = destination_file.with_suffix('.tmp')
+    try:
+        shutil.copy2(source_file, temp_destination)
+        shutil.move(temp_destination, destination_file)
+    except Exception as e:
+        if temp_destination.exists():
+            temp_destination.unlink()
+        raise e
+
+def compare_and_copy(file_tuple):
+    source_file, replica_file = file_tuple
+    if not replica_file.exists() or hash_file(source_file) != hash_file(replica_file):
+        atomic_copy((source_file, replica_file))
+        return f'Copy: {source_file} -> {replica_file}'
+    return None
+
 
 def folder_sync(source_folder, replica_folder, interval, log_file):
-    global sync_time
 
-    try:
-        source_path = Path(source_folder)
-    except:
-        raise os.error('Source folder path is not valid') 
-
+    source_path = Path(source_folder)
     if not source_path.exists():
-        raise os.error('Source Folder does not exist')
+        raise FileNotFoundError('Source Folder does not exist')
     else:
         print('Source Folder found.')
 
-    try:
-        replica_path = Path(replica_folder)
-    except:
-        raise os.error('Replica folder path is not valid')
-
+    replica_path = Path(replica_folder)
     if not replica_path.exists():
         os.makedirs(replica_path)
         print('Replica Folder created:', replica_path)
@@ -32,11 +52,8 @@ def folder_sync(source_folder, replica_folder, interval, log_file):
     if interval < 1:
         raise ValueError('Enter a valid sync interval (positive float or int)')
 
-    try:
-        log_path = Path(log_file)
-        assert not log_path.is_dir()
-    except:
-        raise os.error('Log file path is not valid')
+    log_path = Path(log_file)
+    assert(not log_path.is_dir())
 
     if not log_path.exists():
         open(log_file, 'w').close()
@@ -44,9 +61,6 @@ def folder_sync(source_folder, replica_folder, interval, log_file):
     else:
         print('Log file found.')
 
-    c = 0
-
-    # while c < 5:
     while True:
         if not source_path.exists():
             print()
@@ -54,6 +68,7 @@ def folder_sync(source_folder, replica_folder, interval, log_file):
         sync_time = datetime.now(UTC)
         log_lines = [f'\nSync time (UTC): {sync_time}']
 
+        files_to_compare = []
         for root, dirs, files in source_path.walk():
             replica_dir = replica_path / root.relative_to(source_path) 
             if replica_dir.exists():
@@ -104,8 +119,8 @@ def folder_sync(source_folder, replica_folder, interval, log_file):
 
         if len(log_lines) > 1:
             log_lines.append('\n')
-            open(log_file, 'a').writelines(log_lines)
-        c+=1
+            with open(log_file, 'a') as lf:
+                lf.writelines(log_lines)
         time.sleep(interval)
 
 if __name__ == "__main__":

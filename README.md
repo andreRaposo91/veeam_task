@@ -31,6 +31,6 @@ The **test.py** file creates some files and directories inside the **test/source
 
 ### Scope and Limitations
 
-- Meant for local folders
+- Local folders only
 - 
 
