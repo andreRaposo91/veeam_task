@@ -5,7 +5,7 @@ import argparse
 import time
 from datetime import datetime, UTC
 
-def sync_folders(source_folder, replica_folder, interval, log_file):
+def folder_sync(source_folder, replica_folder, interval, log_file):
     global sync_time
 
     try:
@@ -30,7 +30,7 @@ def sync_folders(source_folder, replica_folder, interval, log_file):
         print('Replica Folder found.')
 
     if interval < 1:
-        raise ValueError('Enter a valid sync interval')
+        raise ValueError('Enter a valid sync interval (positive float or int)')
 
     try:
         log_path = Path(log_file)
@@ -45,25 +45,17 @@ def sync_folders(source_folder, replica_folder, interval, log_file):
         print('Log file found.')
 
     c = 0
-    # os.chdir(str(source_path / '..'))
-    print('source:', source_path)
-    print('replica:', replica_path)
-    print('interval:', interval)
-    print('log_file:', log_path)
-    while c < 1:
-    # while True:
+
+    # while c < 5:
+    while True:
+        if not source_path.exists():
+            print()
+            break
         sync_time = datetime.now(UTC)
         log_lines = [f'\nSync time (UTC): {sync_time}']
 
-        # recursive_copy(source_path, replica_path, log_lines)
-        # print(list(source_path.walk()))
-        # replica_files = list(replica_path.walk())
-        # for i, tup in enumerate(source_path.walk()):
         for root, dirs, files in source_path.walk():
-            # root, dirs, files = tup
-            # _ , rep_dirs, rep_files = replica_files[i]
             replica_dir = replica_path / root.relative_to(source_path) 
-            print('\nReplica Dir', replica_dir)
             if replica_dir.exists():
                 replica_children = [child.name for child in replica_dir.iterdir()]
             else:
@@ -71,31 +63,29 @@ def sync_folders(source_folder, replica_folder, interval, log_file):
             for file in files:
                 source_file_path = root / file
                 replica_file_path = replica_dir / file
-                print('s - ', source_file_path, '; r - ', replica_file_path)
+                # print('s - ', source_file_path, '; r - ', replica_file_path)
                 if replica_file_path.exists():
-                    if source_file_path.stat().st_mtime < replica_file_path.stat().st_mtime:
+                    if source_file_path.stat().st_mtime - replica_file_path.stat().st_mtime > 1.0:
                         shutil.copy2(source_file_path, replica_file_path)
-                        log_lines.append(f'\nUpdate: {source_file_path} -> {replica_file_path}')
+                        log_lines.append(f'\n Update: {source_file_path} -> {replica_file_path}')
                         print(f'Update: {source_file_path} -> {replica_file_path}')
                     else:
-                        print(f'Replica Version up to date')
+                        print(f'Replica Version up to date:', replica_file_path)
                         pass
                 else:
                     shutil.copy2(source_file_path, replica_file_path)
-                    log_lines.append(f'\nCopy: {source_file_path} -> {replica_file_path}')
+                    log_lines.append(f'\n Copy: {source_file_path} -> {replica_file_path}')
                     print(f'Copy: {source_file_path} -> {replica_file_path}')
                 try: replica_children.remove(file)
                 except:
                     print('file not in replica:', replica_dir / file)
                     pass
 
-                # print(root / file)
             for dire in dirs:
                 dire_path = replica_dir / dire
-                print(dire_path.exists())
                 if not dire_path.exists():
                     os.mkdir(dire_path)
-                    log_lines.append(f'\nCreating dir: {dire_path}')
+                    log_lines.append(f'\n Create dir: {dire_path}')
                     print(f'Creating dir: {dire_path}')
                 try: replica_children.remove(dire)
                 except:
@@ -104,17 +94,17 @@ def sync_folders(source_folder, replica_folder, interval, log_file):
 
             for child in replica_children:
                 if (child_path := replica_dir / child).is_dir():
-                    os.removedirs(child_path)
-                    log_lines.append(f'\nDelete (dir): {child_path}')
+                    shutil.rmtree(child_path)
+                    log_lines.append(f'\n Delete dir: {child_path}')
                     print(f'Delete (dir): {child_path}')
                 else:
                     os.remove(child_path)
-                    log_lines.append(f'\nDelete (file): {child_path}')
+                    log_lines.append(f'\n Delete file: {child_path}')
                     print(f'Delete (file): {child_path}')
 
-        # recursive_del(source_path, replica_path, log_file)
-
-        open(log_file, 'a').writelines(log_lines)
+        if len(log_lines) > 1:
+            log_lines.append('\n')
+            open(log_file, 'a').writelines(log_lines)
         c+=1
         time.sleep(interval)
 
@@ -122,8 +112,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Folder sync util")
     parser.add_argument("source_folder", help="Path to the source folder")
     parser.add_argument("replica_folder", help="Path to the replica folder")
-    parser.add_argument("interval", type=int, help="Synchronization interval in seconds")
+    parser.add_argument("interval", type=float, help="Synchronization interval in seconds (float or int)")
     parser.add_argument("log_file", help="Path to the log file")
     args = parser.parse_args()
 
-    sync_folders(args.source_folder, args.replica_folder, args.interval, args.log_file)
+    folder_sync(args.source_folder, args.replica_folder, args.interval, args.log_file)
