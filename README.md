@@ -32,4 +32,4 @@ The **test.py** file creates some files and directories inside the **test/source
 ### Versions
 
 - v1 is simpler implementation, efficient for small folder and file sizes
-- v2 is a parallelization attempt, batching is not implemented, so its slower for small folders
+- v2 is a parallelization attempt, but it is not optimized, so its slower for small folders
