@@ -13,12 +13,12 @@ First, it checks if the input arguments are valid, if the source folder exists a
 On Windows
 
 ```
-python folder_sync.py source_folder replica_folder sync_interval logfile_path
+python folder_sync_v1.py source_folder replica_folder sync_interval logfile_path
 ```
 
 On Unix-style systems
 ```
-python3 folder_sync.py source_folder replica_folder sync_interval logfile_path
+python3 folder_sync_v1.py source_folder replica_folder sync_interval logfile_path
 ```
 
 Notes:
