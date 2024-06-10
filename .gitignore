@@ -1,2 +1,2 @@
-./test/source/*
-./test/replica/*
+./test/source
+./test/replica
