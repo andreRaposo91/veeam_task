@@ -1,432 +1,665 @@
 
-Sync time (UTC): 2024-06-06 22:08:33.726401+00:00
-Copy: test\source\file0 -> test\replica\file0
-Copy: test\source\file1 -> test\replica\file1
-Copy: test\source\file2 -> test\replica\file2
- Create dir: test\replica\dir0
-Copy: test\source\dir0\file0 -> test\replica\dir0\file0
-Copy: test\source\dir0\file1 -> test\replica\dir0\file1
-Copy: test\source\dir0\file2 -> test\replica\dir0\file2
-
-Sync time (UTC): 2024-06-06 22:08:43.735243+00:00
- Update: test\source\file0 -> test\replica\file0
- Update: test\source\file1 -> test\replica\file1
- Update: test\source\file2 -> test\replica\file2
- Update: test\source\dir0\file0 -> test\replica\dir0\file0
- Update: test\source\dir0\file1 -> test\replica\dir0\file1
- Update: test\source\dir0\file2 -> test\replica\dir0\file2
-
-Sync time (UTC): 2024-06-06 22:08:53.743083+00:00
- Update: test\source\file0 -> test\replica\file0
- Update: test\source\file1 -> test\replica\file1
- Update: test\source\file2 -> test\replica\file2
- Update: test\source\dir0\file0 -> test\replica\dir0\file0
- Update: test\source\dir0\file1 -> test\replica\dir0\file1
- Update: test\source\dir0\file2 -> test\replica\dir0\file2
-
-Sync time (UTC): 2024-06-06 22:09:03.750924+00:00
- Update: test\source\file0 -> test\replica\file0
- Update: test\source\file1 -> test\replica\file1
- Update: test\source\file2 -> test\replica\file2
- Update: test\source\dir0\file0 -> test\replica\dir0\file0
- Update: test\source\dir0\file1 -> test\replica\dir0\file1
- Update: test\source\dir0\file2 -> test\replica\dir0\file2
-
-Sync time (UTC): 2024-06-06 22:09:13.760765+00:00
- Update: test\source\file0 -> test\replica\file0
- Update: test\source\file1 -> test\replica\file1
- Update: test\source\file2 -> test\replica\file2
- Update: test\source\dir0\file0 -> test\replica\dir0\file0
- Update: test\source\dir0\file1 -> test\replica\dir0\file1
- Update: test\source\dir0\file2 -> test\replica\dir0\file2
-
-Sync time (UTC): 2024-06-06 22:10:01.474005+00:00
-
-Sync time (UTC): 2024-06-06 22:12:52.711284+00:00
-
-Sync time (UTC): 2024-06-06 22:13:02.715123+00:00
- Delete dir: test\replica\dir0
- Delete file: test\replica\file0
- Delete file: test\replica\file1
- Delete file: test\replica\file2
-
-Sync time (UTC): 2024-06-06 22:13:12.719965+00:00
-
-Sync time (UTC): 2024-06-06 22:13:18.257877+00:00
-Copy: test\source\file0 -> test\replica\file0
-Copy: test\source\file1 -> test\replica\file1
-Copy: test\source\file2 -> test\replica\file2
- Create dir: test\replica\dir0
-Copy: test\source\dir0\file0 -> test\replica\dir0\file0
-Copy: test\source\dir0\file1 -> test\replica\dir0\file1
-Copy: test\source\dir0\file2 -> test\replica\dir0\file2
-
-Sync time (UTC): 2024-06-06 22:13:22.722804+00:00
- Update: test\source\file0 -> test\replica\file0
- Update: test\source\file1 -> test\replica\file1
- Update: test\source\file2 -> test\replica\file2
- Update: test\source\dir0\file0 -> test\replica\dir0\file0
- Update: test\source\dir0\file1 -> test\replica\dir0\file1
- Update: test\source\dir0\file2 -> test\replica\dir0\file2
-
-Sync time (UTC): 2024-06-06 22:13:28.265718+00:00
-Copy: test\source\file3 -> test\replica\file3
-Copy: test\source\file4 -> test\replica\file4
- Delete file: test\replica\file0
- Delete file: test\replica\file1
-Copy: test\source\dir0\file3 -> test\replica\dir0\file3
-Copy: test\source\dir0\file4 -> test\replica\dir0\file4
- Delete file: test\replica\dir0\file0
- Delete file: test\replica\dir0\file1
-
-Sync time (UTC): 2024-06-06 22:13:32.728650+00:00
- Update: test\source\file3 -> test\replica\file3
- Update: test\source\file4 -> test\replica\file4
- Update: test\source\dir0\file3 -> test\replica\dir0\file3
- Update: test\source\dir0\file4 -> test\replica\dir0\file4
-
-Sync time (UTC): 2024-06-06 22:13:38.273558+00:00
- Update: test\source\file3 -> test\replica\file3
- Update: test\source\file4 -> test\replica\file4
- Update: test\source\dir0\file3 -> test\replica\dir0\file3
- Update: test\source\dir0\file4 -> test\replica\dir0\file4
-
-Sync time (UTC): 2024-06-06 22:13:48.280400+00:00
- Update: test\source\file3 -> test\replica\file3
- Update: test\source\file4 -> test\replica\file4
- Update: test\source\dir0\file3 -> test\replica\dir0\file3
- Update: test\source\dir0\file4 -> test\replica\dir0\file4
-
-Sync time (UTC): 2024-06-06 22:13:58.285240+00:00
- Update: test\source\file3 -> test\replica\file3
- Update: test\source\file4 -> test\replica\file4
- Update: test\source\dir0\file3 -> test\replica\dir0\file3
- Update: test\source\dir0\file4 -> test\replica\dir0\file4
-
-Sync time (UTC): 2024-06-06 22:14:00.706204+00:00
-Copy: test\source\file0 -> test\replica\file0
-Copy: test\source\file1 -> test\replica\file1
- Delete file: test\replica\file3
- Delete file: test\replica\file4
-Copy: test\source\dir0\file0 -> test\replica\dir0\file0
-Copy: test\source\dir0\file1 -> test\replica\dir0\file1
- Delete file: test\replica\dir0\file3
- Delete file: test\replica\dir0\file4
-
-Sync time (UTC): 2024-06-06 22:14:10.712042+00:00
-Copy: test\source\file5 -> test\replica\file5
-Copy: test\source\file6 -> test\replica\file6
-Copy: test\source\file7 -> test\replica\file7
- Delete file: test\replica\file0
- Delete file: test\replica\file1
- Delete file: test\replica\file2
-Copy: test\source\dir0\file5 -> test\replica\dir0\file5
-Copy: test\source\dir0\file6 -> test\replica\dir0\file6
-Copy: test\source\dir0\file7 -> test\replica\dir0\file7
- Delete file: test\replica\dir0\file0
- Delete file: test\replica\dir0\file1
- Delete file: test\replica\dir0\file2
-
-Sync time (UTC): 2024-06-06 22:14:20.720884+00:00
-
-Sync time (UTC): 2024-06-06 22:14:54.192353+00:00
-Copy: test\source\file0 -> test\replica\file0
-Copy: test\source\file1 -> test\replica\file1
-Copy: test\source\file2 -> test\replica\file2
- Delete file: test\replica\file5
- Delete file: test\replica\file6
- Delete file: test\replica\file7
-Copy: test\source\dir0\file0 -> test\replica\dir0\file0
-Copy: test\source\dir0\file1 -> test\replica\dir0\file1
-Copy: test\source\dir0\file2 -> test\replica\dir0\file2
- Delete file: test\replica\dir0\file5
- Delete file: test\replica\dir0\file6
- Delete file: test\replica\dir0\file7
-
-Sync time (UTC): 2024-06-06 22:15:04.205203+00:00
- Update: test\source\file0 -> test\replica\file0
- Update: test\source\file1 -> test\replica\file1
- Update: test\source\file2 -> test\replica\file2
- Update: test\source\dir0\file0 -> test\replica\dir0\file0
- Update: test\source\dir0\file1 -> test\replica\dir0\file1
- Update: test\source\dir0\file2 -> test\replica\dir0\file2
-
-Sync time (UTC): 2024-06-06 22:15:14.213034+00:00
-Copy: test\source\file3 -> test\replica\file3
-Copy: test\source\file4 -> test\replica\file4
- Delete file: test\replica\file0
- Delete file: test\replica\file1
-Copy: test\source\dir0\file3 -> test\replica\dir0\file3
-Copy: test\source\dir0\file4 -> test\replica\dir0\file4
- Delete file: test\replica\dir0\file0
- Delete file: test\replica\dir0\file1
-
-Sync time (UTC): 2024-06-06 22:15:24.221874+00:00
-Copy: test\source\file1 -> test\replica\file1
- Delete file: test\replica\file4
-Copy: test\source\dir0\file1 -> test\replica\dir0\file1
- Delete file: test\replica\dir0\file4
-
-Sync time (UTC): 2024-06-06 22:15:34.226743+00:00
-Copy: test\source\file4 -> test\replica\file4
- Delete file: test\replica\file1
-Copy: test\source\dir0\file4 -> test\replica\dir0\file4
- Delete file: test\replica\dir0\file1
-
-Sync time (UTC): 2024-06-06 22:43:49.271339+00:00
- Delete file: test\replica\dir0\file2
- Delete file: test\replica\dir0\file3
- Delete file: test\replica\dir0\file4
-
-Sync time (UTC): 2024-06-06 22:43:54.275452+00:00
-
-Sync time (UTC): 2024-06-06 22:43:59.279493+00:00
-
-Sync time (UTC): 2024-06-06 22:44:04.282486+00:00
-
-Sync time (UTC): 2024-06-06 22:44:09.285540+00:00
-
-Sync time (UTC): 2024-06-06 22:44:14.289501+00:00
-
-Sync time (UTC): 2024-06-06 22:44:19.292505+00:00
-
-Sync time (UTC): 2024-06-06 22:44:24.296463+00:00
-
-Sync time (UTC): 2024-06-06 22:44:29.301430+00:00
-
-Sync time (UTC): 2024-06-06 22:44:34.311383+00:00
-
-Sync time (UTC): 2024-06-06 22:44:39.315342+00:00
-
-Sync time (UTC): 2024-06-06 22:44:44.320300+00:00
-
-Sync time (UTC): 2024-06-06 22:44:49.324259+00:00
-
-Sync time (UTC): 2024-06-06 22:44:54.328242+00:00
-
-Sync time (UTC): 2024-06-06 22:44:59.332201+00:00
- Copy: test\source\dir0\file3 -> test\replica\dir0\file3
-
-Sync time (UTC): 2024-06-06 22:45:04.339220+00:00
- Update: test\source\dir0\file3 -> test\replica\dir0\file3
-
-Sync time (UTC): 2024-06-06 22:45:09.345195+00:00
- Update: test\source\dir0\file3 -> test\replica\dir0\file3
-
-Sync time (UTC): 2024-06-06 22:45:14.350154+00:00
- Update: test\source\dir0\file3 -> test\replica\dir0\file3
-
-Sync time (UTC): 2024-06-06 22:45:19.354114+00:00
- Update: test\source\dir0\file3 -> test\replica\dir0\file3
-
-Sync time (UTC): 2024-06-06 22:46:41.591687+00:00
- Update: test\source\file2 -> test\replica\file2
- Update: test\source\file3 -> test\replica\file3
- Update: test\source\file4 -> test\replica\file4
-
-Sync time (UTC): 2024-06-07 01:14:44.314984+00:00
- Copy: test\source\file0 -> test\replica\file0
- Copy: test\source\file1 -> test\replica\file1
- Update: test\source\file2 -> test\replica\file2
- Delete file: test\replica\file3
- Delete file: test\replica\file4
- Copy: test\source\dir0\file0 -> test\replica\dir0\file0
- Copy: test\source\dir0\file1 -> test\replica\dir0\file1
- Copy: test\source\dir0\file2 -> test\replica\dir0\file2
- Delete file: test\replica\dir0\file3
-
-Sync time (UTC): 2024-06-07 01:15:04.327870+00:00
+Sync time (UTC): 2024-06-10 01:58:09.334175+00:00
  Copy: test\source\file5 -> test\replica\file5
  Copy: test\source\file6 -> test\replica\file6
  Copy: test\source\file7 -> test\replica\file7
- Delete file: test\replica\file0
- Delete file: test\replica\file1
- Delete file: test\replica\file2
- Delete file: test\replica\dir0\file0
- Delete file: test\replica\dir0\file1
- Delete file: test\replica\dir0\file2
+ Copy: test\source\file8 -> test\replica\file8
+ Copy: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir6
+ Create dir: test\replica\dir7
+ Create dir: test\replica\dir8
 
-Sync time (UTC): 2024-06-07 01:16:25.491994+00:00
+Sync time (UTC): 2024-06-10 01:59:43.142278+00:00
+ Copy: test\source\file10 -> test\replica\file10
+ Copy: test\source\file11 -> test\replica\file11
+ Copy: test\source\file12 -> test\replica\file12
+ Copy: test\source\file13 -> test\replica\file13
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Delete dir: test\replica\dir7
+ Delete dir: test\replica\dir8
+
+Sync time (UTC): 2024-06-10 01:59:47.304978+00:00
  Copy: test\source\file0 -> test\replica\file0
  Copy: test\source\file1 -> test\replica\file1
  Copy: test\source\file2 -> test\replica\file2
- Delete file: test\replica\file5
- Delete file: test\replica\file6
- Delete file: test\replica\file7
- Copy: test\source\dir0\file0 -> test\replica\dir0\file0
- Copy: test\source\dir0\file1 -> test\replica\dir0\file1
- Copy: test\source\dir0\file2 -> test\replica\dir0\file2
-
-Sync time (UTC): 2024-06-07 01:16:44.352635+00:00
  Copy: test\source\file3 -> test\replica\file3
  Copy: test\source\file4 -> test\replica\file4
- Copy: test\source\file5 -> test\replica\file5
+ Delete dir: test\replica\dir6
+ Delete file: test\replica\file10
+ Delete file: test\replica\file11
+ Delete file: test\replica\file12
+ Delete file: test\replica\file13
+ Delete file: test\replica\file6
+ Delete file: test\replica\file7
+ Delete file: test\replica\file8
+ Delete file: test\replica\file9
+
+Sync time (UTC): 2024-06-10 01:59:51.318009+00:00
+ Update: test\source\file0 -> test\replica\file0
+ Update: test\source\file1 -> test\replica\file1
+ Copy: test\source\file10 -> test\replica\file10
+ Copy: test\source\file11 -> test\replica\file11
+ Update: test\source\file5 -> test\replica\file5
  Copy: test\source\file6 -> test\replica\file6
+ Copy: test\source\file7 -> test\replica\file7
+ Copy: test\source\file8 -> test\replica\file8
+ Copy: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir0
+ Create dir: test\replica\dir1
+
+Sync time (UTC): 2024-06-10 02:00:00.061408+00:00
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Copy: test\source\file12 -> test\replica\file12
+ Copy: test\source\file13 -> test\replica\file13
+ Copy: test\source\file14 -> test\replica\file14
+ Copy: test\source\file15 -> test\replica\file15
+ Copy: test\source\file16 -> test\replica\file16
+ Update: test\source\file2 -> test\replica\file2
+ Update: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir3
+ Create dir: test\replica\dir4
+ Create dir: test\replica\dir5
+ Delete dir: test\replica\dir0
+ Delete dir: test\replica\dir1
+ Delete file: test\replica\file0
+ Delete file: test\replica\file1
+
+Sync time (UTC): 2024-06-10 02:00:04.286432+00:00
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Create dir: test\replica\dir6
+ Create dir: test\replica\dir7
+
+Sync time (UTC): 2024-06-10 02:00:08.528824+00:00
+ Update: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Create dir: test\replica\dir8
+ Delete file: test\replica\file10
+ Delete file: test\replica\file11
+ Delete file: test\replica\file12
+ Delete file: test\replica\file13
+ Delete file: test\replica\file14
+ Delete file: test\replica\file15
+ Delete file: test\replica\file16
+ Delete file: test\replica\file2
+ Delete file: test\replica\file9
+
+Sync time (UTC): 2024-06-10 02:00:16.759826+00:00
+ Copy: test\source\file0 -> test\replica\file0
+ Copy: test\source\file1 -> test\replica\file1
+ Copy: test\source\file10 -> test\replica\file10
+ Copy: test\source\file11 -> test\replica\file11
+ Copy: test\source\file2 -> test\replica\file2
+ Update: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Copy: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir0
+ Create dir: test\replica\dir1
+ Create dir: test\replica\dir2
+
+Sync time (UTC): 2024-06-10 02:00:20.981966+00:00
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Copy: test\source\file12 -> test\replica\file12
+ Copy: test\source\file13 -> test\replica\file13
+ Copy: test\source\file14 -> test\replica\file14
+ Copy: test\source\file15 -> test\replica\file15
+ Copy: test\source\file16 -> test\replica\file16
+ Copy: test\source\file17 -> test\replica\file17
+ Copy: test\source\file18 -> test\replica\file18
+ Copy: test\source\file19 -> test\replica\file19
+ Update: test\source\file2 -> test\replica\file2
+ Copy: test\source\file20 -> test\replica\file20
+ Copy: test\source\file21 -> test\replica\file21
+ Update: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Delete dir: test\replica\dir0
+ Delete dir: test\replica\dir1
+ Delete dir: test\replica\dir2
+ Delete dir: test\replica\dir8
+ Delete file: test\replica\file0
+ Delete file: test\replica\file1
+
+Sync time (UTC): 2024-06-10 02:00:29.845966+00:00
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Update: test\source\file12 -> test\replica\file12
+ Update: test\source\file13 -> test\replica\file13
+ Update: test\source\file14 -> test\replica\file14
+ Update: test\source\file15 -> test\replica\file15
+ Update: test\source\file16 -> test\replica\file16
+ Update: test\source\file17 -> test\replica\file17
+ Update: test\source\file18 -> test\replica\file18
+ Update: test\source\file19 -> test\replica\file19
+ Update: test\source\file20 -> test\replica\file20
+ Update: test\source\file21 -> test\replica\file21
+ Update: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Delete dir: test\replica\dir3
+ Delete dir: test\replica\dir4
+ Delete dir: test\replica\dir5
+ Delete dir: test\replica\dir6
+ Delete dir: test\replica\dir7
+ Delete file: test\replica\file2
+
+Sync time (UTC): 2024-06-10 02:00:34.314969+00:00
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Update: test\source\file12 -> test\replica\file12
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir10
+ Create dir: test\replica\dir11
+ Create dir: test\replica\dir12
+ Create dir: test\replica\dir13
+ Create dir: test\replica\dir6
+ Create dir: test\replica\dir7
+ Create dir: test\replica\dir8
+ Create dir: test\replica\dir9
+ Delete file: test\replica\file13
+ Delete file: test\replica\file14
+ Delete file: test\replica\file15
+ Delete file: test\replica\file16
+ Delete file: test\replica\file17
+ Delete file: test\replica\file18
+ Delete file: test\replica\file19
+ Delete file: test\replica\file20
+ Delete file: test\replica\file21
+ Delete file: test\replica\file3
+
+Sync time (UTC): 2024-06-10 02:00:42.853966+00:00
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Update: test\source\file12 -> test\replica\file12
+ Copy: test\source\file13 -> test\replica\file13
+ Copy: test\source\file14 -> test\replica\file14
+ Copy: test\source\file15 -> test\replica\file15
+ Copy: test\source\file16 -> test\replica\file16
+ Copy: test\source\file17 -> test\replica\file17
+ Copy: test\source\file18 -> test\replica\file18
+ Copy: test\source\file19 -> test\replica\file19
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Delete dir: test\replica\dir10
+ Delete dir: test\replica\dir11
+ Delete dir: test\replica\dir12
+ Delete dir: test\replica\dir13
+ Delete dir: test\replica\dir9
+
+Sync time (UTC): 2024-06-10 02:00:47.002969+00:00
+ Copy: test\source\file1 -> test\replica\file1
+ Copy: test\source\file2 -> test\replica\file2
+ Copy: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Create dir: test\replica\dir0
+ Create dir: test\replica\dir1
+ Create dir: test\replica\dir2
+ Create dir: test\replica\dir3
+ Create dir: test\replica\dir4
+ Delete dir: test\replica\dir6
+ Delete dir: test\replica\dir7
+ Delete dir: test\replica\dir8
+ Delete file: test\replica\file10
+ Delete file: test\replica\file11
+ Delete file: test\replica\file12
+ Delete file: test\replica\file13
+ Delete file: test\replica\file14
+ Delete file: test\replica\file15
+ Delete file: test\replica\file16
+ Delete file: test\replica\file17
+ Delete file: test\replica\file18
+ Delete file: test\replica\file19
+ Delete file: test\replica\file8
+ Delete file: test\replica\file9
+
+Sync time (UTC): 2024-06-10 02:00:51.078447+00:00
+ Update: test\source\file6 -> test\replica\file6
+ Create dir: test\replica\dir5
+
+Sync time (UTC): 2024-06-10 02:00:55.159502+00:00
+ Copy: test\source\file10 -> test\replica\file10
+ Copy: test\source\file11 -> test\replica\file11
+ Copy: test\source\file12 -> test\replica\file12
+ Copy: test\source\file13 -> test\replica\file13
+ Update: test\source\file2 -> test\replica\file2
+ Update: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Copy: test\source\file8 -> test\replica\file8
+ Copy: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir10
+ Create dir: test\replica\dir11
+ Create dir: test\replica\dir12
+ Create dir: test\replica\dir6
+ Create dir: test\replica\dir7
+ Create dir: test\replica\dir8
+ Create dir: test\replica\dir9
+ Delete dir: test\replica\dir0
+ Delete dir: test\replica\dir1
+ Delete dir: test\replica\dir2
+ Delete file: test\replica\file1
+
+Sync time (UTC): 2024-06-10 02:01:03.384256+00:00
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file2 -> test\replica\file2
+ Update: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Delete dir: test\replica\dir10
+ Delete dir: test\replica\dir11
+ Delete dir: test\replica\dir12
+ Delete file: test\replica\file11
+ Delete file: test\replica\file12
+ Delete file: test\replica\file13
+
+Sync time (UTC): 2024-06-10 02:01:07.532868+00:00
+ Update: test\source\file10 -> test\replica\file10
+ Copy: test\source\file11 -> test\replica\file11
+ Copy: test\source\file12 -> test\replica\file12
+ Copy: test\source\file13 -> test\replica\file13
+ Copy: test\source\file14 -> test\replica\file14
+ Copy: test\source\file15 -> test\replica\file15
+ Copy: test\source\file16 -> test\replica\file16
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Delete dir: test\replica\dir3
+ Delete dir: test\replica\dir4
+ Delete dir: test\replica\dir5
+ Delete file: test\replica\file2
+ Delete file: test\replica\file3
+
+Sync time (UTC): 2024-06-10 02:01:11.706866+00:00
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Update: test\source\file12 -> test\replica\file12
+ Update: test\source\file13 -> test\replica\file13
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir10
+ Create dir: test\replica\dir11
+ Create dir: test\replica\dir12
+ Create dir: test\replica\dir13
+ Create dir: test\replica\dir14
+ Create dir: test\replica\dir15
+
+Sync time (UTC): 2024-06-10 02:01:15.986868+00:00
+ Copy: test\source\file1 -> test\replica\file1
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Update: test\source\file12 -> test\replica\file12
+ Update: test\source\file13 -> test\replica\file13
+ Update: test\source\file14 -> test\replica\file14
+ Update: test\source\file15 -> test\replica\file15
+ Update: test\source\file16 -> test\replica\file16
+ Copy: test\source\file17 -> test\replica\file17
+ Copy: test\source\file18 -> test\replica\file18
+ Copy: test\source\file19 -> test\replica\file19
+ Copy: test\source\file2 -> test\replica\file2
+ Copy: test\source\file20 -> test\replica\file20
+ Copy: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir0
+ Create dir: test\replica\dir1
+ Create dir: test\replica\dir2
+ Create dir: test\replica\dir3
+ Create dir: test\replica\dir4
+ Create dir: test\replica\dir5
+ Delete dir: test\replica\dir10
+ Delete dir: test\replica\dir11
+ Delete dir: test\replica\dir12
+ Delete dir: test\replica\dir13
+ Delete dir: test\replica\dir14
+ Delete dir: test\replica\dir15
+
+Sync time (UTC): 2024-06-10 02:01:24.708869+00:00
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Update: test\source\file12 -> test\replica\file12
+ Update: test\source\file13 -> test\replica\file13
+ Update: test\source\file14 -> test\replica\file14
+ Update: test\source\file15 -> test\replica\file15
+ Update: test\source\file16 -> test\replica\file16
+ Update: test\source\file17 -> test\replica\file17
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir10
+ Create dir: test\replica\dir11
+ Create dir: test\replica\dir12
+ Create dir: test\replica\dir13
+ Create dir: test\replica\dir14
+ Create dir: test\replica\dir15
+ Delete dir: test\replica\dir0
+ Delete dir: test\replica\dir1
+ Delete dir: test\replica\dir2
+ Delete dir: test\replica\dir3
+ Delete dir: test\replica\dir4
+ Delete dir: test\replica\dir5
+ Delete file: test\replica\file1
+ Delete file: test\replica\file18
+ Delete file: test\replica\file19
+ Delete file: test\replica\file2
+ Delete file: test\replica\file20
+ Delete file: test\replica\file3
+ Delete file: test\replica\file4
+
+Sync time (UTC): 2024-06-10 02:01:28.958868+00:00
+ Copy: test\source\file1 -> test\replica\file1
+ Update: test\source\file10 -> test\replica\file10
+ Copy: test\source\file2 -> test\replica\file2
+ Copy: test\source\file3 -> test\replica\file3
+ Copy: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Delete dir: test\replica\dir10
+ Delete dir: test\replica\dir11
+ Delete dir: test\replica\dir12
+ Delete dir: test\replica\dir13
+ Delete dir: test\replica\dir14
+ Delete dir: test\replica\dir15
+ Delete dir: test\replica\dir6
+ Delete dir: test\replica\dir7
+ Delete dir: test\replica\dir8
+ Delete dir: test\replica\dir9
+ Delete file: test\replica\file11
+ Delete file: test\replica\file12
+ Delete file: test\replica\file13
+ Delete file: test\replica\file14
+ Delete file: test\replica\file15
+ Delete file: test\replica\file16
+ Delete file: test\replica\file17
+
+Sync time (UTC): 2024-06-10 02:01:33.200246+00:00
+ Copy: test\source\file11 -> test\replica\file11
+
+Sync time (UTC): 2024-06-10 02:01:37.366246+00:00
+ Update: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
  Create dir: test\replica\dir3
  Create dir: test\replica\dir4
  Create dir: test\replica\dir5
  Create dir: test\replica\dir6
- Delete file: test\replica\file0
+ Create dir: test\replica\dir7
  Delete file: test\replica\file1
+ Delete file: test\replica\file10
+ Delete file: test\replica\file11
  Delete file: test\replica\file2
- Delete file: test\replica\dir0\file0
- Delete file: test\replica\dir0\file1
- Delete file: test\replica\dir0\file2
- Copy: test\source\dir3\file3 -> test\replica\dir3\file3
- Copy: test\source\dir4\file3 -> test\replica\dir4\file3
- Copy: test\source\dir5\file3 -> test\replica\dir5\file3
- Copy: test\source\dir5\file4 -> test\replica\dir5\file4
- Copy: test\source\dir6\file3 -> test\replica\dir6\file3
- Copy: test\source\dir6\file4 -> test\replica\dir6\file4
+ Delete file: test\replica\file9
 
-Sync time (UTC): 2024-06-07 01:16:54.367179+00:00
+Sync time (UTC): 2024-06-10 02:01:41.530734+00:00
+ Copy: test\source\file10 -> test\replica\file10
+ Copy: test\source\file11 -> test\replica\file11
+ Copy: test\source\file2 -> test\replica\file2
+ Update: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
  Update: test\source\file5 -> test\replica\file5
  Update: test\source\file6 -> test\replica\file6
- Copy: test\source\file7 -> test\replica\file7
- Copy: test\source\file8 -> test\replica\file8
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Copy: test\source\file9 -> test\replica\file9
+ Delete dir: test\replica\dir4
+ Delete dir: test\replica\dir5
+ Delete dir: test\replica\dir6
+ Delete dir: test\replica\dir7
+
+Sync time (UTC): 2024-06-10 02:01:45.730731+00:00
+ Update: test\source\file2 -> test\replica\file2
+ Update: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Create dir: test\replica\dir4
+ Create dir: test\replica\dir5
+ Create dir: test\replica\dir6
  Create dir: test\replica\dir7
  Create dir: test\replica\dir8
+
+Sync time (UTC): 2024-06-10 02:01:49.952364+00:00
+ Copy: test\source\file1 -> test\replica\file1
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Copy: test\source\file12 -> test\replica\file12
+ Copy: test\source\file13 -> test\replica\file13
+ Copy: test\source\file14 -> test\replica\file14
+ Update: test\source\file2 -> test\replica\file2
+ Update: test\source\file3 -> test\replica\file3
+ Update: test\source\file4 -> test\replica\file4
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir0
+ Create dir: test\replica\dir1
+ Create dir: test\replica\dir2
+
+Sync time (UTC): 2024-06-10 02:01:58.507095+00:00
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Update: test\source\file12 -> test\replica\file12
+ Update: test\source\file13 -> test\replica\file13
+ Update: test\source\file14 -> test\replica\file14
+ Copy: test\source\file15 -> test\replica\file15
+ Copy: test\source\file16 -> test\replica\file16
+ Copy: test\source\file17 -> test\replica\file17
+ Copy: test\source\file18 -> test\replica\file18
+ Copy: test\source\file19 -> test\replica\file19
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Delete dir: test\replica\dir0
+ Delete dir: test\replica\dir1
+ Delete dir: test\replica\dir2
  Delete dir: test\replica\dir3
  Delete dir: test\replica\dir4
  Delete dir: test\replica\dir5
+ Delete file: test\replica\file1
+ Delete file: test\replica\file2
  Delete file: test\replica\file3
  Delete file: test\replica\file4
- Copy: test\source\dir6\file10 -> test\replica\dir6\file10
- Copy: test\source\dir6\file11 -> test\replica\dir6\file11
- Copy: test\source\dir6\file12 -> test\replica\dir6\file12
- Copy: test\source\dir6\file5 -> test\replica\dir6\file5
- Copy: test\source\dir6\file6 -> test\replica\dir6\file6
- Copy: test\source\dir6\file7 -> test\replica\dir6\file7
- Copy: test\source\dir6\file8 -> test\replica\dir6\file8
- Copy: test\source\dir6\file9 -> test\replica\dir6\file9
- Delete file: test\replica\dir6\file3
- Delete file: test\replica\dir6\file4
- Copy: test\source\dir7\file10 -> test\replica\dir7\file10
- Copy: test\source\dir7\file11 -> test\replica\dir7\file11
- Copy: test\source\dir7\file12 -> test\replica\dir7\file12
- Copy: test\source\dir7\file13 -> test\replica\dir7\file13
- Copy: test\source\dir7\file5 -> test\replica\dir7\file5
- Copy: test\source\dir7\file6 -> test\replica\dir7\file6
- Copy: test\source\dir7\file7 -> test\replica\dir7\file7
- Copy: test\source\dir7\file8 -> test\replica\dir7\file8
- Copy: test\source\dir7\file9 -> test\replica\dir7\file9
- Copy: test\source\dir8\file10 -> test\replica\dir8\file10
- Copy: test\source\dir8\file11 -> test\replica\dir8\file11
- Copy: test\source\dir8\file5 -> test\replica\dir8\file5
- Copy: test\source\dir8\file6 -> test\replica\dir8\file6
- Copy: test\source\dir8\file7 -> test\replica\dir8\file7
- Copy: test\source\dir8\file8 -> test\replica\dir8\file8
- Copy: test\source\dir8\file9 -> test\replica\dir8\file9
 
-Sync time (UTC): 2024-06-07 01:17:04.395646+00:00
- Copy: test\source\file4 -> test\replica\file4
- Create dir: test\replica\dir10
- Create dir: test\replica\dir9
- Delete file: test\replica\file5
- Delete file: test\replica\file6
- Delete file: test\replica\file7
- Delete file: test\replica\file8
- Copy: test\source\dir10\file4 -> test\replica\dir10\file4
- Copy: test\source\dir10\file5 -> test\replica\dir10\file5
- Copy: test\source\dir6\file4 -> test\replica\dir6\file4
- Update: test\source\dir6\file5 -> test\replica\dir6\file5
- Update: test\source\dir6\file6 -> test\replica\dir6\file6
- Delete file: test\replica\dir6\file10
- Delete file: test\replica\dir6\file11
- Delete file: test\replica\dir6\file12
- Delete file: test\replica\dir6\file7
- Delete file: test\replica\dir6\file8
- Delete file: test\replica\dir6\file9
- Copy: test\source\dir7\file4 -> test\replica\dir7\file4
- Update: test\source\dir7\file5 -> test\replica\dir7\file5
- Delete file: test\replica\dir7\file10
- Delete file: test\replica\dir7\file11
- Delete file: test\replica\dir7\file12
- Delete file: test\replica\dir7\file13
- Delete file: test\replica\dir7\file6
- Delete file: test\replica\dir7\file7
- Delete file: test\replica\dir7\file8
- Delete file: test\replica\dir7\file9
- Copy: test\source\dir8\file4 -> test\replica\dir8\file4
- Update: test\source\dir8\file5 -> test\replica\dir8\file5
- Delete file: test\replica\dir8\file10
- Delete file: test\replica\dir8\file11
- Delete file: test\replica\dir8\file6
- Delete file: test\replica\dir8\file7
- Delete file: test\replica\dir8\file8
- Delete file: test\replica\dir8\file9
- Copy: test\source\dir9\file4 -> test\replica\dir9\file4
- Copy: test\source\dir9\file5 -> test\replica\dir9\file5
-
-Sync time (UTC): 2024-06-07 01:17:14.421917+00:00
- Update: test\source\file4 -> test\replica\file4
- Copy: test\source\file5 -> test\replica\file5
- Update: test\source\dir10\file4 -> test\replica\dir10\file4
- Update: test\source\dir10\file5 -> test\replica\dir10\file5
- Copy: test\source\dir10\file6 -> test\replica\dir10\file6
- Copy: test\source\dir6\file10 -> test\replica\dir6\file10
- Copy: test\source\dir6\file11 -> test\replica\dir6\file11
- Copy: test\source\dir6\file12 -> test\replica\dir6\file12
- Copy: test\source\dir6\file13 -> test\replica\dir6\file13
- Update: test\source\dir6\file4 -> test\replica\dir6\file4
- Update: test\source\dir6\file5 -> test\replica\dir6\file5
- Update: test\source\dir6\file6 -> test\replica\dir6\file6
- Copy: test\source\dir6\file7 -> test\replica\dir6\file7
- Copy: test\source\dir6\file8 -> test\replica\dir6\file8
- Copy: test\source\dir6\file9 -> test\replica\dir6\file9
- Update: test\source\dir7\file4 -> test\replica\dir7\file4
- Update: test\source\dir7\file5 -> test\replica\dir7\file5
- Update: test\source\dir8\file4 -> test\replica\dir8\file4
- Update: test\source\dir8\file5 -> test\replica\dir8\file5
- Copy: test\source\dir8\file6 -> test\replica\dir8\file6
- Copy: test\source\dir8\file7 -> test\replica\dir8\file7
- Copy: test\source\dir8\file8 -> test\replica\dir8\file8
- Copy: test\source\dir8\file9 -> test\replica\dir8\file9
- Update: test\source\dir9\file4 -> test\replica\dir9\file4
- Update: test\source\dir9\file5 -> test\replica\dir9\file5
- Copy: test\source\dir9\file6 -> test\replica\dir9\file6
- Copy: test\source\dir9\file7 -> test\replica\dir9\file7
- Copy: test\source\dir9\file8 -> test\replica\dir9\file8
-
-Sync time (UTC): 2024-06-07 01:17:24.446245+00:00
+Sync time (UTC): 2024-06-10 02:02:02.743472+00:00
+ Copy: test\source\file1 -> test\replica\file1
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Update: test\source\file12 -> test\replica\file12
+ Update: test\source\file13 -> test\replica\file13
+ Copy: test\source\file2 -> test\replica\file2
  Copy: test\source\file3 -> test\replica\file3
- Update: test\source\file4 -> test\replica\file4
+ Copy: test\source\file4 -> test\replica\file4
  Update: test\source\file5 -> test\replica\file5
- Copy: test\source\file6 -> test\replica\file6
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir0
+ Create dir: test\replica\dir1
+ Create dir: test\replica\dir2
  Create dir: test\replica\dir3
  Create dir: test\replica\dir4
+ Create dir: test\replica\dir5
+ Delete dir: test\replica\dir7
+ Delete dir: test\replica\dir8
+ Delete file: test\replica\file14
+ Delete file: test\replica\file15
+ Delete file: test\replica\file16
+ Delete file: test\replica\file17
+ Delete file: test\replica\file18
+ Delete file: test\replica\file19
+
+Sync time (UTC): 2024-06-10 02:02:07.397474+00:00
+ Create dir: test\replica\dir7
+
+Sync time (UTC): 2024-06-10 02:02:11.759654+00:00
+ Update: test\source\file10 -> test\replica\file10
+ Update: test\source\file11 -> test\replica\file11
+ Update: test\source\file12 -> test\replica\file12
+ Update: test\source\file13 -> test\replica\file13
+ Copy: test\source\file14 -> test\replica\file14
+ Copy: test\source\file15 -> test\replica\file15
+ Copy: test\source\file16 -> test\replica\file16
+ Copy: test\source\file17 -> test\replica\file17
+ Copy: test\source\file18 -> test\replica\file18
+ Copy: test\source\file19 -> test\replica\file19
+ Update: test\source\file5 -> test\replica\file5
+ Update: test\source\file6 -> test\replica\file6
+ Update: test\source\file7 -> test\replica\file7
+ Update: test\source\file8 -> test\replica\file8
+ Update: test\source\file9 -> test\replica\file9
+ Create dir: test\replica\dir10
+ Create dir: test\replica\dir8
+ Create dir: test\replica\dir9
+ Delete dir: test\replica\dir0
+ Delete dir: test\replica\dir1
+ Delete dir: test\replica\dir2
+ Delete dir: test\replica\dir3
+ Delete dir: test\replica\dir4
+ Delete dir: test\replica\dir5
+ Delete file: test\replica\file1
+ Delete file: test\replica\file2
+ Delete file: test\replica\file3
+ Delete file: test\replica\file4
+
+Sync time (UTC): 2024-06-10 02:02:20.331123+00:00
+ Delete file: test\replica\file10
+ Delete file: test\replica\file11
+ Delete file: test\replica\file12
+ Delete file: test\replica\file13
+ Delete file: test\replica\file14
+
+Sync time (UTC): 2024-06-10 02:02:32.390391+00:00
+ Copy: test\source\file0 -> test\replica\file0
+ Copy: test\source\file1 -> test\replica\file1
+ Copy: test\source\file2 -> test\replica\file2
+ Create dir: test\replica\dir0
  Delete dir: test\replica\dir10
  Delete dir: test\replica\dir6
  Delete dir: test\replica\dir7
  Delete dir: test\replica\dir8
  Delete dir: test\replica\dir9
-
-Sync time (UTC): 2024-06-07 01:17:34.460268+00:00
- Update: test\source\file3 -> test\replica\file3
- Update: test\source\file4 -> test\replica\file4
- Update: test\source\file5 -> test\replica\file5
- Create dir: test\replica\dir5
- Create dir: test\replica\dir6
+ Delete file: test\replica\file15
+ Delete file: test\replica\file16
+ Delete file: test\replica\file17
+ Delete file: test\replica\file18
+ Delete file: test\replica\file19
+ Delete file: test\replica\file5
  Delete file: test\replica\file6
- Copy: test\source\dir4\file3 -> test\replica\dir4\file3
- Copy: test\source\dir4\file4 -> test\replica\dir4\file4
- Copy: test\source\dir4\file5 -> test\replica\dir4\file5
- Copy: test\source\dir4\file6 -> test\replica\dir4\file6
- Copy: test\source\dir4\file7 -> test\replica\dir4\file7
- Copy: test\source\dir4\file8 -> test\replica\dir4\file8
- Copy: test\source\dir4\file9 -> test\replica\dir4\file9
- Copy: test\source\dir5\file10 -> test\replica\dir5\file10
- Copy: test\source\dir5\file11 -> test\replica\dir5\file11
- Copy: test\source\dir5\file3 -> test\replica\dir5\file3
- Copy: test\source\dir5\file4 -> test\replica\dir5\file4
- Copy: test\source\dir5\file5 -> test\replica\dir5\file5
- Copy: test\source\dir5\file6 -> test\replica\dir5\file6
- Copy: test\source\dir5\file7 -> test\replica\dir5\file7
- Copy: test\source\dir5\file8 -> test\replica\dir5\file8
- Copy: test\source\dir5\file9 -> test\replica\dir5\file9
- Copy: test\source\dir6\file3 -> test\replica\dir6\file3
- Copy: test\source\dir6\file4 -> test\replica\dir6\file4
- Copy: test\source\dir6\file5 -> test\replica\dir6\file5
- Copy: test\source\dir6\file6 -> test\replica\dir6\file6
- Copy: test\source\dir6\file7 -> test\replica\dir6\file7
- Copy: test\source\dir6\file8 -> test\replica\dir6\file8
+ Delete file: test\replica\file7
+ Delete file: test\replica\file8
+ Delete file: test\replica\file9
+ Copy: test\source\dir0\file0 -> test\replica\dir0\file0
+ Copy: test\source\dir0\file1 -> test\replica\dir0\file1
+ Copy: test\source\dir0\file2 -> test\replica\dir0\file2
+
+Sync time (UTC): 2024-06-10 02:03:28.540783+00:00
+ Update: test\source\file0 -> test\replica\file0
+ Update: test\source\file1 -> test\replica\file1
+ Update: test\source\file2 -> test\replica\file2
+ Delete file: test\replica\dir0\file0
+ Delete file: test\replica\dir0\file1
+ Delete file: test\replica\dir0\file2
+
+Sync time (UTC): 2024-06-10 02:05:08.784031+00:00
+ Delete dir: test\replica\dir4
+ Delete file: test\replica\dir4\file3
+
+Sync time (UTC): 2024-06-10 02:06:08.935496+00:00
+ Update: test\source\file0 -> test\replica\file0
+ Update: test\source\file1 -> test\replica\file1
+ Update: test\source\file2 -> test\replica\file2
+ Delete dir: test\replica\dir4
+ Delete file: test\replica\dir4\file3
+ Delete file: test\replica\dir4\file4
+ Delete file: test\replica\dir4\file5
+ Delete file: test\replica\dir4\file6
+ Delete file: test\replica\dir4\file7
+ Delete file: test\replica\dir4\file8
+ Delete file: test\replica\dir4\file9
+ Delete dir: test\replica\dir5
+ Delete file: test\replica\dir5\file10
+ Delete file: test\replica\dir5\file11
+ Delete file: test\replica\dir5\file3
+ Delete file: test\replica\dir5\file4
+ Delete file: test\replica\dir5\file5
+ Delete file: test\replica\dir5\file6
+ Delete file: test\replica\dir5\file7
+ Delete file: test\replica\dir5\file8
+ Delete file: test\replica\dir5\file9
+ Delete dir: test\replica\dir6
+ Delete file: test\replica\dir6\file3
+ Delete file: test\replica\dir6\file4
+ Delete file: test\replica\dir6\file5
+ Delete file: test\replica\dir6\file6
+ Delete file: test\replica\dir6\file7
+ Delete file: test\replica\dir6\file8
+ Delete file: test\replica\file3
+ Delete file: test\replica\file4
+ Delete file: test\replica\file5

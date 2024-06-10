@@ -4,6 +4,26 @@ import shutil
 import argparse
 import time
 from datetime import datetime, UTC
+import hashlib
+
+def hash_file(file_path):
+    hash_fun = hashlib.blake2b()
+    with open(file_path, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            hash_fun.update(chunk)
+    return hash_fun.hexdigest()
+
+def safe_copy(src_repl_tuple):
+    source_file, destination_file = src_repl_tuple
+    temp_destination = destination_file.with_suffix('.tmp')
+    try:
+        shutil.copy2(source_file, temp_destination)
+        shutil.move(temp_destination, destination_file)
+    except Exception as e:
+        if temp_destination.exists():
+            temp_destination.unlink()
+        # raise e
+        print("Copy Error:", e)
 
 def folder_sync(source_folder, replica_folder, interval, log_file):
     global sync_time
@@ -65,20 +85,21 @@ def folder_sync(source_folder, replica_folder, interval, log_file):
                 replica_file_path = replica_dir / file
                 # print('s - ', source_file_path, '; r - ', replica_file_path)
                 if replica_file_path.exists():
-                    if source_file_path.stat().st_mtime - replica_file_path.stat().st_mtime > 1.0:
-                        shutil.copy2(source_file_path, replica_file_path)
+                    if hash_file(source_file_path) != hash_file(replica_file_path):
+                        safe_copy((source_file_path, replica_file_path))
                         log_lines.append(f'\n Update: {source_file_path} -> {replica_file_path}')
-                        print(f'Update: {source_file_path} -> {replica_file_path}')
+                        # print(f'Update: {source_file_path} -> {replica_file_path}')
                     else:
-                        print(f'Replica Version up to date:', replica_file_path)
+                        # print(f'Replica Version up to date:', replica_file_path)
                         pass
                 else:
-                    shutil.copy2(source_file_path, replica_file_path)
+                    safe_copy((source_file_path, replica_file_path))
                     log_lines.append(f'\n Copy: {source_file_path} -> {replica_file_path}')
-                    print(f'Copy: {source_file_path} -> {replica_file_path}')
-                try: replica_children.remove(file)
+                    # print(f'Copy: {source_file_path} -> {replica_file_path}')
+                try:
+                    replica_children.remove(file)
                 except:
-                    print('file not in replica:', replica_dir / file)
+                    # print('file not in replica:', replica_dir / file)
                     pass
 
             for dire in dirs:
@@ -86,21 +107,32 @@ def folder_sync(source_folder, replica_folder, interval, log_file):
                 if not dire_path.exists():
                     os.mkdir(dire_path)
                     log_lines.append(f'\n Create dir: {dire_path}')
-                    print(f'Creating dir: {dire_path}')
+                    # print(f'Creating dir: {dire_path}')
                 try: replica_children.remove(dire)
                 except:
-                    print('dir not in replica:', replica_dir / dire)
+                    # print('dir not in replica:', replica_dir / dire)
                     pass
 
             for child in replica_children:
                 if (child_path := replica_dir / child).is_dir():
-                    shutil.rmtree(child_path)
-                    log_lines.append(f'\n Delete dir: {child_path}')
-                    print(f'Delete (dir): {child_path}')
-                else:
-                    os.remove(child_path)
-                    log_lines.append(f'\n Delete file: {child_path}')
-                    print(f'Delete (file): {child_path}')
+                    try:
+                        deleted_temp = []
+                        for root, _, files in child_path.walk():
+                            deleted_temp.append(f'\n Delete dir: {root}')
+                            deleted_temp.extend((f'\n Delete file: {root / file}' for file in files))
+                        shutil.rmtree(child_path)
+                        log_lines.extend(deleted_temp)
+                    except Exception as e:
+                        print(f'Failed to delete dir and children {child_path}: {e}')
+                    # print(f'Delete (dir): {child_path}')
+                elif child_path.exists():
+                    try:
+                        child_path.unlink()
+                        log_lines.append(f'\n Delete file: {child_path}')
+                    except Exception as e:
+                        print(f'Failed to delete file {child_path}: {e}')
+
+                    # print(f'Delete (file): {child_path}')
 
         if len(log_lines) > 1:
             log_lines.append('\n')

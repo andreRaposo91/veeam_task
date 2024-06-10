@@ -6,7 +6,7 @@ When running, this cli tool will keep a replica of the chosen source folder up t
 
 ### How it works
 
-First, it checks if the input arguments are valid, if the source folder exists and if the replica folder needs to be created. Then it walks recursively through the source folder, checking if files are already in the replica folder and up to date or if they need to be copied. If there are files and directories that are on the replica folder but not on the source folder, they are deleted. All actions are logged on the log file.
+First, it checks if the input arguments are valid, if the source folder exists and if the replica folder needs to be created. Then it walks through the source folder, checking if files are already in the replica folder and up to date or if they need to be copied. If there are files and directories that are on the replica folder but not on the source folder, they are deleted. All actions are logged on the log file.
 
 ### Usage
 
@@ -25,12 +25,11 @@ Notes:
 - the paths can be absolute or relative paths
 - the *sync interval* is in seconds
 
-<!-- ### Testing
+### Testing
 
-The **test.py** file creates some files and directories inside the **test/source** folder and launches a new process running the CLI tool. Between syncs, the source is updated randomly with files and directories. It stops after 10 syncs -->
+The **test.py** file creates some files and directories inside the **test/source** folder and launches a new process running the CLI tool. Between syncs, the source folder is updated randomly with files and directories.
 
-### Scope and Limitations
+### Versions
 
-- Local folders only
-- 
-
+- v1 is simpler implementation, efficient for small folder and file sizes
+- v2 is a parallelization attempt, batching is not implemented, so its slower for small folders
